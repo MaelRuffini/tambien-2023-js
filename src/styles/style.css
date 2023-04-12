@@ -1,0 +1,26 @@
+.home-about__info-link:hover{
+    text-decoration: underline;
+}
+
+.home-footer__title,
+.home-footer__text,
+.home-footer__social-link,
+.nav-content__link-wraper .nav-content__link{
+    transition: all 0.1s ease-in-out;
+}
+
+.home-footer__content:hover .home-footer__title,
+.home-footer__content:hover .home-footer__text,
+.home-footer__social-link:hover,
+.nav-content__link-wraper:hover .nav-content__link:not(:hover){
+    opacity: 0.3;
+    transition: all 0.2s ease-in-out;
+}
+
+.section.section--nav-content.open{
+    display: block;
+}
+
+.nav-content__wrapper.open{
+    display: flex;
+}
