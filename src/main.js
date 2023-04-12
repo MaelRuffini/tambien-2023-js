@@ -8,6 +8,7 @@ import homeScroll from './pages/home/home-scroll'
 import work from './pages/work/work'
 import cs from './pages/cs/cs'
 
+console.log('Hello world')
 
 const lenis = new Lenis()
 
