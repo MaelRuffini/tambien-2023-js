@@ -23,7 +23,7 @@ function work()
             }, 0)
             .to([title, text], {
                 opacity: 0.3,
-                duration: 0.15,
+                duration: 0,
                 ease: 'Quart.easeInOut'
             }, 0)
 
