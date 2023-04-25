@@ -16,6 +16,8 @@ import course from './pages/course/course'
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 
+function scroll()
+{
 	let smoother = ScrollSmoother.create({
         wrapper: '.smooth-wrapper',
         content: '.smooth-content',
@@ -24,6 +26,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
         effects: true,
     })
 
+    smoother.scrollTo(0, false)
+}
 
 let navLinks = document.querySelectorAll('.nav__link--toggle')
     
@@ -89,6 +93,7 @@ barba.init({
         name: 'default-transition',
         once() {
             init()
+            scroll()
             // let loaderTl = gsap.timeline()
             // loaderTl.to('.loader', {
             //     opacity: 0,
@@ -121,7 +126,7 @@ barba.init({
             })
         },
         async enter(data) {
-            smoother.scrollTo(0, false)
+            scroll()
             // let enterTl = gsap.timeline()
             // enterTl.to('.body', {
             //     opacity: 1,
