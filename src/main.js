@@ -126,7 +126,6 @@ barba.init({
             })
         },
         async enter(data) {
-            scroll()
             // let enterTl = gsap.timeline()
             // enterTl.to('.body', {
             //     opacity: 1,
@@ -135,6 +134,7 @@ barba.init({
             // })
         },
         async after() {
+            scroll()
             init()
         }
         }],
