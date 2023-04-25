@@ -17,7 +17,9 @@
     "vite-plugin-glsl": "^0.1.1"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@studio-freight/lenis": "^1.0.6",
+    "barba.js": "^1.0.0",
     "gsap": "file:gsap-bonus.tgz"
   }
 }
