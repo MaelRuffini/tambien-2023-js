@@ -82,7 +82,6 @@ function init(){
     }
 
 }
-init()
 
 
 barba.init({
@@ -90,7 +89,6 @@ barba.init({
         name: 'default-transition',
         once() {
             init()
-            scrollSmootherCreate()
             // let loaderTl = gsap.timeline()
             // loaderTl.to('.loader', {
             //     opacity: 0,

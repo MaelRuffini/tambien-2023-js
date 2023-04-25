@@ -3,12 +3,6 @@ import gsap from 'gsap'
 function header()
 {
 
-    /**
-     * Session storage
-     */
-    sessionStorage.setItem('scroll', 'play')
-
-
     let mm = gsap.matchMedia()
 
     // Desktop
