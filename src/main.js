@@ -32,29 +32,8 @@ function scroll()
 
 function load()
 {
-    let splitTextTop = new SplitText('.loading__text--top', {
-        type: 'chars'
-    })
-
-    let splitTextBottom = new SplitText('.loading__text--bottom', {
-        type: 'chars'
-    })
 
     let loaderTl = gsap.timeline()
-    loaderTl.to(splitTextTop.chars, {
-        opacity: 1,
-        delay: 0.2,
-        duration: 0.1,
-        stagger: 0.04,
-        ease: 'Quart.easeInOut'
-    }, 0)
-    loaderTl.to(splitTextBottom.chars, {
-        opacity: 1,
-        delay: 0.2,
-        duration: 0.2,
-        stagger: 0.04,
-        ease: 'Quart.easeInOut'
-    }, 0)
     loaderTl.to('.loading__wrapper', {
         opacity: 0,
         duration: 0.8,
