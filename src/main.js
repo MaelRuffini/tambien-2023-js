@@ -2,6 +2,7 @@ import './styles/style.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
+import { SplitText } from "gsap/SplitText"
 import barba from '@barba/core'
 
 import header from './components/header/header'
@@ -14,7 +15,7 @@ import cs from './pages/cs/cs'
 import courseScroll from './pages/course/course-scroll'
 import course from './pages/course/course'
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
 
 function scroll()
 {
@@ -27,6 +28,49 @@ function scroll()
     })
 
     smoother.scrollTo(0, false)
+}
+
+function load()
+{
+    let splitTextTop = new SplitText('.loading__text--top', {
+        type: 'chars'
+    })
+
+    let splitTextBottom = new SplitText('.loading__text--bottom', {
+        type: 'chars'
+    })
+
+    let loaderTl = gsap.timeline()
+    loaderTl.from(splitTextTop.chars, {
+        opacity: 0.6,
+        delay: 0.2,
+        duration: 0.2,
+        stagger: 0.04,
+        ease: 'Quart.easeInOut'
+    }, 0)
+    loaderTl.from(splitTextBottom.chars, {
+        opacity: 0.6,
+        delay: 0.2,
+        duration: 0.1,
+        stagger: 0.04,
+        ease: 'Quart.easeInOut'
+    }, 0)
+    loaderTl.to('.loading__wrapper', {
+        opacity: 0,
+        duration: 0.8,
+        ease: 'Quart.easeInOut'
+    }, 0.8)
+    loaderTl.to('.loading__background', {
+        opacity: 0,
+        duration: 0.4,
+        ease: 'Quart.easeInOut'
+    }, 1.2)
+    loaderTl.to('.loader', {
+        display: 'none',
+        duration: 0
+    })
+
+    
 }
 
 header()
@@ -100,15 +144,7 @@ barba.init({
         once() {
             init()
             scroll()
-            // let loaderTl = gsap.timeline()
-            // loaderTl.to('.loader', {
-            //     opacity: 0,
-            //     duration: 0.8,
-            //     ease: 'Quart.easeInOut'
-            // })
-            // .to('.loader', {
-            //     display: 'none'
-            // })
+            load()
         },
         async leave(data) {
             return new Promise(resolve => {
