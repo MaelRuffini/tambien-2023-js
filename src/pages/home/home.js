@@ -34,24 +34,23 @@ function home()
     /**
      * Video player
      */
-    // const videos = document.querySelectorAll('.home-projects__video')
-    // videos.forEach(item => {
+    const videos = document.querySelectorAll('.home-projects__video')
 
-    //     let playPromise = item.play()
+    if(videos){
+        videos.forEach(item => {
 
-    //     if (playPromise !== undefined) {
-    //         playPromise.then(_ => {
-    //             console.log('works')
-    //         })
-    //         .catch(error => {
-    //             console.log('error')
-    //         });
-    //       }
-    // })
+            let playPromise = item.play()
+    
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                })
+                .catch(error => {
+                });
+              }
+        })
+    } else {
 
-
-
-
+    }
 
 }
 
