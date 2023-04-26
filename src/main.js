@@ -44,14 +44,14 @@ function load()
     loaderTl.from(splitTextTop.chars, {
         opacity: 0.6,
         delay: 0.2,
-        duration: 0.2,
+        duration: 0.1,
         stagger: 0.04,
         ease: 'Quart.easeInOut'
     }, 0)
     loaderTl.from(splitTextBottom.chars, {
         opacity: 0.6,
         delay: 0.2,
-        duration: 0.1,
+        duration: 0.2,
         stagger: 0.04,
         ease: 'Quart.easeInOut'
     }, 0)
