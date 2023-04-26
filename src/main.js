@@ -123,12 +123,12 @@ barba.init({
                 }, 0)
                 .to('.transition__wrapper', {
                     opacity: 1,
-                    duration: 0.3,
+                    duration: 0.1,
                 }, 0)
                 .to('.transition__wrapper', {
                     backgroundColor: 'rgba(26, 26, 26, 1)',
-                    duration: 0.3,
-                }, 0.15)
+                    duration: 0.1,
+                }, 0.1)
             })
             
         },
@@ -142,12 +142,12 @@ barba.init({
             let enterTl = gsap.timeline()
             .to('.transition__wrapper', {
                 backgroundColor: 'rgba(26, 26, 26, 0.6)',
-                duration: 0.3,
+                duration: 0.15,
             }, 0)
             .to('.transition__wrapper', {
                 opacity: 0,
-                duration: 0.3,
-            }, 0.15)
+                duration: 0.15,
+            }, 0.1)
             .to('.transition__wrapper', {
                 display: 'none',
                 duration: 0
