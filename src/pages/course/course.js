@@ -39,10 +39,9 @@ function course()
     /**
      * Video player
      */
-    let videoWrapper = document.querySelectorAll('.course-instructor__video')
-    let video = videoWrapper.querySelector('video')
-    
+    let video = document.querySelector('video')
     video.play()
+
 
 }
 

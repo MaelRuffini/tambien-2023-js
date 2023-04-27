@@ -14,6 +14,7 @@ import work from './pages/work/work'
 import cs from './pages/cs/cs'
 import courseScroll from './pages/course/course-scroll'
 import course from './pages/course/course'
+import fluent from './pages/fluent/fluent'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
 
@@ -112,7 +113,7 @@ function init(){
 
     const isFluent = document.querySelector('body').classList.contains('body--fluent')
     if(isFluent){
-    
+        fluent()
     }
 
 }
