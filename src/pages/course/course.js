@@ -42,7 +42,7 @@ function course()
     let videoWrapper = document.querySelectorAll('.course-instructor__video')
     let video = videoWrapper.querySelector('video')
     
-    item.play()
+    video.play()
 
 }
 
