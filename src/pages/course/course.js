@@ -35,6 +35,15 @@ function course()
  
     })
 
+
+    /**
+     * Video player
+     */
+    let videoWrapper = document.querySelectorAll('.course-instructor__video')
+    let video = videoWrapper.querySelector('video')
+    
+    item.play()
+
 }
 
 export default course
