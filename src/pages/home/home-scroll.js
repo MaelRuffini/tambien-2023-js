@@ -10,7 +10,7 @@ function homeScroll()
      * Title parallax
      */
     gsap.to('.home-hero__title-parallax', {
-        yPercent: 20,
+        yPercent: 30,
         ease: 'none',
         scrollTrigger:{
             trigger: '.home-hero__wrapper',

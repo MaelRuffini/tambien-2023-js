@@ -90,7 +90,7 @@ function fluent()
             document.querySelector('.code--max-desktop').classList.remove('hide')
             document.querySelector('.code--max-large').classList.add('hide')
             document.querySelector('.form__card--desktop').classList.remove('form__card--desktop-large')
-            } 
+            }
     }
 
     
