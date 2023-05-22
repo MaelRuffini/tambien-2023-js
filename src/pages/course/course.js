@@ -42,7 +42,6 @@ function course()
     let video = document.querySelector('video')
     video.play()
 
-
 }
 
 export default course

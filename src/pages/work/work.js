@@ -11,21 +11,62 @@ function work()
 
         projectLinks.forEach(item => {
 
-            let images = item.querySelectorAll('.work-hero__image--animation')
+            let images = item.querySelectorAll('.work-hero__image')
             let title = item.querySelector('.work-hero__info-title')
             let text = item.querySelector('.work-hero__info-text')
 
-            let projectsTl = gsap.timeline({ paused: true })
-            .to(images, {
+            let projectsTl = gsap.timeline({ paused: true, repeat: -1, defaults:{ ease: 'none'} })
+            .to(images[0], {
                 display: 'block',
-                stagger: 0.2,
-                ease: 'none'
+                ease: 'none',
+                duration: 0.2
             }, 0)
-            .to([title, text], {
-                opacity: 0.3,
-                duration: 0,
-                ease: 'Quart.easeInOut'
+            .to([images[1], images[2], images[3], images[4]], {
+                display: 'none',
+                ease: 'none',
+                duration: 0.2
             }, 0)
+            .to(images[1], {
+                display: 'block',
+                ease: 'none',
+                duration: 0.2
+            }, 0.2)
+            .to([images[0], images[2], images[3], images[4]], {
+                display: 'none',
+                ease: 'none',
+                duration: 0.2
+            }, 0.2)
+            .to(images[2], {
+                display: 'block',
+                ease: 'none',
+                duration: 0.2
+            }, 0.4)
+            .to([images[0], images[1], images[3], images[4]], {
+                display: 'none',
+                ease: 'none',
+                duration: 0.2
+            }, 0.4)
+            .to(images[3], {
+                display: 'block',
+                ease: 'none',
+                duration: 0.2
+            }, 0.6)
+            .to([images[0], images[1], images[2], images[4]], {
+                display: 'none',
+                ease: 'none',
+                duration: 0.2
+            }, 0.6)
+            .to(images[4], {
+                display: 'block',
+                ease: 'none',
+                duration: 0.2
+            }, 0.8)
+            .to([images[0], images[1], images[2], images[3]], {
+                display: 'none',
+                ease: 'none',
+                duration: 0.2
+            }, 0.8)
+
 
             item.addEventListener('mouseenter', () => { projectsTl.restart() })
             item.addEventListener('mouseleave', () => {
@@ -35,6 +76,7 @@ function work()
                     title.style.opacity = '1'
                     text.style.opacity = '1'
                 })
+                item.querySelector('.work-hero__image').style.display = 'block'
             })
 
         })

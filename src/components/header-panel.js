@@ -20,7 +20,7 @@ function headerPanel()
 
         buttons.forEach(item => {
 
-            let buttonsTl = gsap.timeline({ paused: true, repeat: 2, repeatDelay: 0.2 })
+            let buttonsTl = gsap.timeline({ paused: true, repeat: 3, repeatDelay: 0.075 })
             .to(item.querySelector('.button__text'), {
                 opacity: 0,
                 duration: 0,
@@ -28,7 +28,7 @@ function headerPanel()
             .to(item.querySelector('.button__text'), {
                 opacity: 1,
                 duration: 0,
-                delay: 0.25
+                delay: 0.075
             })
         
             item.addEventListener('mouseenter', () => { buttonsTl.restart() })

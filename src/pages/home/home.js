@@ -24,6 +24,7 @@ function home()
     let homeProjectsHoverTl = gsap.timeline({ paused: true })
     .to('.cursor', {
         opacity: 1,
+        scale: 1,
         ease: 'easeInOut',
         duration: 0.2,
     })
