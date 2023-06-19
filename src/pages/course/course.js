@@ -42,6 +42,25 @@ function course()
     let video = document.querySelector('video')
     video.play()
 
+
+    let videoBottom = document.querySelector('.course-video')
+
+    if(videoBottom){
+        videoBottom.forEach(item => {
+
+            let playPromise = item.play()
+    
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                })
+                .catch(error => {
+                });
+              }
+        })
+    } else {
+
+    }
+
 }
 
 export default course
