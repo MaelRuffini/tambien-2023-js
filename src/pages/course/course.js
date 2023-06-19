@@ -39,7 +39,7 @@ function course()
     /**
      * Video player
      */
-    let videoBottom = document.querySelector('.course-video')
+    let videoBottom = document.querySelectorAll('.course-video')
 
     if(videoBottom){
         videoBottom.forEach(item => {
