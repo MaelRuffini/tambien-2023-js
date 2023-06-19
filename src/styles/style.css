@@ -34,3 +34,25 @@
 .overflow-hidden{
     overflow: hidden;
 }
+
+.nav__link:hover{
+    text-decoration: underline;
+}
+
+.home-footer__news-wrapper,
+.home-footer__news-mask,
+.home-footer__news-content,
+.button--nav{
+    transition: all 0.4s ease;
+}
+
+.home-footer__news-wrapper:hover .home-footer__news-mask{
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+.home-footer__news-wrapper:hover .home-footer__news-content{
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+

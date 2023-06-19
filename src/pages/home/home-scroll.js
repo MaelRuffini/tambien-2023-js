@@ -1,10 +1,13 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import { SplitText } from 'gsap/all'
 
 function homeScroll()
 {
 
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger, SplitText)
+
+    let mm = gsap.matchMedia()
 
     /**
      * Title parallax
@@ -41,6 +44,17 @@ function homeScroll()
 
     })
 
+    gsap.to('.home-projects__cl-image--first', {
+        yPercent: 35,
+        ease: 'none',
+        scrollTrigger:{
+            trigger: '.home-projects__cl-image--first',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        }
+    })
+
 
     /**
      * Team picture parallax
@@ -55,6 +69,73 @@ function homeScroll()
             scrub: true
         }
     })
+
+
+    mm.add("(min-width: 768px)", () => {
+
+
+        /**
+         * Titles animations
+         */
+        let homeAboutTitles = document.querySelectorAll('.home-about__title-wrapper')
+
+        homeAboutTitles.forEach(item => {
+
+            gsap.from(item.querySelector('.home-about__title'), {
+                yPercent: 120,
+                rotate: 5,
+                duration: 1.4,
+                ease: 'Quart.easeInOut',
+                scrollTrigger: {
+                    trigger: '.home-about__title-container',
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            })
+
+        })
+
+
+        /**
+         * Footer parallax
+         */
+        let footerTl = gsap.timeline({
+            scrollTrigger:{
+                trigger: '.home-footer__wrapper',
+                start: 'top bottom',
+                end: 'bottom bottom',
+                scrub: true
+            }
+        })
+        .fromTo('.home-footer__news-wrapper--one', {
+            y: '7rem'
+        }, {
+            y: '0rem'
+        }, 0)
+        .fromTo('.home-footer__news-wrapper--two', {
+            y: '6rem'
+        }, {
+            y: '-5rem'
+        }, 0)
+        .fromTo('.home-footer__news-wrapper--three', {
+            y: '6rem'
+        }, {
+            y: '-10rem'
+        }, 0)
+        .fromTo('.home-footer__news-wrapper--four', {
+            y: '6rem'
+        }, {
+            y: '-12rem'
+        }, 0)
+        .fromTo('.home-footer__news-wrapper--five', {
+            y: '6rem'
+        }, {
+            y: '-5rem'
+        }, 0)
+
+    
+    })
+
 
 }
 

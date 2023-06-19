@@ -64,7 +64,7 @@ function headerPanel()
             .from(navContainers[i].querySelectorAll('.row'), {
                 opacity: 0,
                 yPercent: 50,
-                duration: 0.2,
+                duration: 0.3,
                 stagger: 0.1
             }, 0.2)
 

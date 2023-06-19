@@ -53,11 +53,13 @@ function load()
     
 }
 
-header()
-headerScroll()
+
+
 
 function init(){
 
+    header()
+    headerScroll()
     headerPanel()
 
     let navLinks = document.querySelectorAll('.nav__link--toggle')
@@ -97,7 +99,7 @@ function init(){
 
     const isWork = document.querySelector('body').classList.contains('body--work')
     if(isWork){
-    work()
+        work()
     }
 
     const isCs = document.querySelector('body').classList.contains('body--cs')
@@ -203,6 +205,11 @@ barba.init({
         { namespace: 'sg',
         beforeEnter(){
             document.querySelector('body').className = 'body body--sg'
+            }
+        },
+        { namespace: 'legals',
+        beforeEnter(){
+            document.querySelector('body').className = 'body body--legals'
             }
         }
     ],
