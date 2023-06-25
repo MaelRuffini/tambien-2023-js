@@ -108,29 +108,35 @@ function homeScroll()
             }
         })
         .fromTo('.home-footer__news-wrapper--one', {
-            y: '7rem'
-        }, {
-            y: '0rem'
-        }, 0)
-        .fromTo('.home-footer__news-wrapper--two', {
-            y: '6rem'
+            y: '7rem',
+            ease: 'none'
         }, {
             y: '-5rem'
+        }, 0)
+        .fromTo('.home-footer__news-wrapper--two', {
+            y: '6rem',
+            ease: 'none'
+        }, {
+            y: '-2rem',
+            ease: 'none'
         }, 0)
         .fromTo('.home-footer__news-wrapper--three', {
             y: '6rem'
         }, {
-            y: '-10rem'
+            y: '-10rem',
+            ease: 'none'
         }, 0)
         .fromTo('.home-footer__news-wrapper--four', {
             y: '6rem'
         }, {
-            y: '-12rem'
+            y: '-12rem',
+            ease: 'none'
         }, 0)
         .fromTo('.home-footer__news-wrapper--five', {
-            y: '6rem'
+            y: '10rem'
         }, {
-            y: '-5rem'
+            y: '-4rem',
+            ease: 'none'
         }, 0)
 
     

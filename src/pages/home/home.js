@@ -77,7 +77,7 @@ function home()
         opacity: 1,
         scale: 1,
         ease: 'easeInOut',
-        duration: 0.2,
+        duration: 0.1,
     })
 
     cursorHoverProject.addEventListener('mouseenter', () => { cursorProjectTl.play() })
